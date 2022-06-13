@@ -1,0 +1,30 @@
+{
+  "name": "lerooftop",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build client/src/index.html --dist-dir client/dist",
+    "start": "node server/index.js",
+    "dev": "concurrently \"parcel watch client/src/index.html --dist-dir client/dist\" \"nodemon server/index.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-svg-react": "^2.6.0",
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5",
+    "concurrently": "^7.2.1",
+    "nodemon": "^2.0.16",
+    "parcel": "^2.6.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "typescript": "^4.7.3"
+  }
+}
