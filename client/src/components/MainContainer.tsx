@@ -19,8 +19,8 @@ const MainContainer: React.FC<Props> = ({ children }) => {
 const styles : {[name: string]: React.CSSProperties} = { 
     container: {
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
         boxSizing: 'border-box',
         height: '100vh',
         width: '100vw',
@@ -28,9 +28,7 @@ const styles : {[name: string]: React.CSSProperties} = {
         backgroundImage: noiseSVG,
         background: `linear-gradient(#060F5B, #6A82FB)`,
         filter: 'contrast(120%) brightness(110%)',
-        paddingLeft: '5%',
-        paddingRight: '5%',
-        paddingBottom: 25
+        padding: '5%',
     },
     grain: {
         background: `url(${noiseSVG})`,
