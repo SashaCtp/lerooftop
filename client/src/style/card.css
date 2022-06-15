@@ -33,4 +33,6 @@
     width: 100%;
     box-sizing: border-box;
     padding: 15px 20px; 
+    max-height: 80vh;
+    overflow-x: auto;
 }

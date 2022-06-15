@@ -1,19 +1,18 @@
 import React from 'react';
 import MainContainer from './components/MainContainer';
 import Card from './components/Card';
+import NewsCard from './components/NewsCard';
 
 function App() {
 
 	return (
 		<div className="App">
 			<MainContainer>
-				<div style={styles.column}>
-					<Card icon='📰' title='News'>
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis minus qui totam fugit asperiores, repellat laboriosam accusamus, sequi reprehenderit inventore natus at explicabo officiis? Asperiores pariatur distinctio ut sit iure.
-					</Card>
+				<div className='column'>
+					<NewsCard />
 				</div>
 
-				<div style={styles.column}>
+				<div className='column'>
 					<Card icon='⛅' title='Weather'>
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis minus qui totam fugit asperiores, repellat laboriosam accusamus, sequi reprehenderit inventore natus at explicabo officiis? Asperiores pariatur distinctio ut sit iure.
 					</Card>
@@ -24,12 +23,6 @@ function App() {
 			</MainContainer>
 		</div>
 	);
-}
-
-const styles: { [name: string]: React.CSSProperties } = {
-	column: {
-
-	}
 }
 
 export default App;

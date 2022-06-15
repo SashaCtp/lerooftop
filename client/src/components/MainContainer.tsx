@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react";
 import noiseSVG from "../images/noise.svg";
 
+import '../style/container.css';
+
 type Props = {
     children: ReactNode | ReactNode[]
 }
