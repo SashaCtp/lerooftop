@@ -1,6 +1,7 @@
 import React from 'react';
 import MainContainer from './components/MainContainer';
 import Card from './components/Card';
+import AICard from './components/Assistant/AICard';
 
 function App() {
 
@@ -17,9 +18,7 @@ function App() {
 					<Card icon='⛅' title='Weather'>
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis minus qui totam fugit asperiores, repellat laboriosam accusamus, sequi reprehenderit inventore natus at explicabo officiis? Asperiores pariatur distinctio ut sit iure.
 					</Card>
-					<Card icon='🗣️' title='Smart Assistant'>
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis minus qui totam fugit asperiores, repellat laboriosam accusamus, sequi reprehenderit inventore natus at explicabo officiis? Asperiores pariatur distinctio ut sit iure.
-					</Card>
+					<AICard/>
 				</div>
 			</MainContainer>
 		</div>
@@ -28,7 +27,7 @@ function App() {
 
 const styles: { [name: string]: React.CSSProperties } = {
 	column: {
-
+        
 	}
 }
 
