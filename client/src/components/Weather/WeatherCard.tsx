@@ -49,11 +49,14 @@ const WeatherCard = () => {
                     setLoaded(true);
                 })
                 .catch(err => {
+                    console.error('An error occured while getting user\'s geolocation.');
                     console.error(err);
-                    setLoaded(true);
                 });
         })
-            .catch(err => console.error(err));
+            .catch(err => {
+                console.error(err)
+                setLoaded(true);
+            });
     }, []);
 
     if(!loaded){
