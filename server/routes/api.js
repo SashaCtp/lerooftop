@@ -15,7 +15,7 @@ api.use('/', cors({
 }));
 
 // News API proxy
-api.get('/news/*', (req, res, next) => {
+api.get('/news/*', (req, res) => {
 
     if(req.url == '/news/')
         return res.sendStatus(404);
@@ -36,6 +36,31 @@ api.get('/news/*', (req, res, next) => {
         console.error(err);
         res.status(400).send(err);
     })
+
+});
+
+// Stocks
+api.get('/stocks/*', (req, res) => {
+
+    if(req.url == '/stocks/')
+        return res.sendStatus(404);
+
+    const BASE_URL = 'https://yfapi.net/v6/finance/';
+    const API_KEY = '0Z9Xum8dRQaz1lCUaWNhSgyHzfdl1LF1DQIjQzJ3';
+
+    let proxy = BASE_URL + req.url.substring(8);
+    console.log('Stocks API request : ' + proxy)
+    
+    axios.get(proxy, {
+        headers: {
+            'X-API-Key': API_KEY
+        }
+    }).then(data => {
+        res.send(data.data);
+    }).catch(err => {
+        console.error(err);
+        res.status(400).send(err);
+    });
 
 });
 
