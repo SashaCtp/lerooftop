@@ -1,0 +1,67 @@
+.stocks {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stock {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 5px 10px;
+}
+
+.stock .symbol, .stock .price {
+    display: inline;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.stock .symbol {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin-right: 2px solid black;
+}
+
+.stock .price {
+    margin-left: 10px;
+    font-family: 'Inconsolata';
+}
+
+.stock-variation {
+    margin-left: 10px;
+    font-family: 'Inconsolata', serif;
+    font-weight: bold;
+    font: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.positive-variation {
+    color: #306B34;
+}
+
+.positive-variation .variation-triangle{
+    border-bottom: 12px #306B34 solid;
+}
+
+.negative-variation {
+    color: #9A031E;
+}
+
+.negative-variation .variation-triangle {
+    border-top: 12px #9A031E solid;
+}
+
+.variation-triangle {
+    width: 14px;
+    height: 14px;
+    background: transparent;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    margin-right: 5px;
+}
+

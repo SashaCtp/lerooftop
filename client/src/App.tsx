@@ -3,12 +3,19 @@ import MainContainer from './components/Container/MainContainer';
 import Card from './components/Card/Card';
 import NewsCard from './components/News/NewsCard';
 import WeatherCard from './components/Weather/WeatherCard';
+import Banner from './components/Banner/Banner';
+import StocksBanner from './components/Stocks/StocksBanner';
 
 function App() {
 
 	return (
 		<div className="App">
 			<MainContainer>
+
+				<div className='row'>
+					<StocksBanner />
+				</div>
+
 				<div className='column'>
 					<NewsCard />
 				</div>
