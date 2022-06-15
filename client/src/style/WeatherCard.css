@@ -1,0 +1,24 @@
+.container {
+    text-align: center;
+
+}
+
+.temperature {
+}
+
+.windspeed {
+    margin: auto;
+}
+
+.parameter {
+    text-align: center;
+    display: flex;
+}
+
+.humidity {
+    margin: auto;
+}
+
+.precipitation {
+    margin: auto;
+}

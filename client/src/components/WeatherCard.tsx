@@ -1,6 +1,6 @@
 import React, { Dispatch, useEffect, useState } from "react";
 import Card from "./Card"
-import '../style/card.css';
+import '../style/WeatherCard.css';
 
 const WeatherCard = () => {
     const [weatherData, setWeatherData]: [any, Dispatch<any>] = useState();
@@ -39,7 +39,7 @@ const WeatherCard = () => {
                     }
                 })
                 .then(data => data.json())
-                .then(data => setWeatherData(data))
+                .then(data => {setWeatherData(data); console.log(data)})
                 .catch(err => console.error(err));
         })
             .catch(err => console.error(err));
@@ -47,8 +47,8 @@ const WeatherCard = () => {
 
 return (
     <Card icon='⛅' title='Weather'>
-        <div style={styles.container}>
-            <div style={styles.temperature}>
+        <div className="container">
+            <div className="temperature">
                 <h1>
                     {weatherData ? weatherData?.forecast[0].temp2m + '°' : ''}
                 </h1>
@@ -56,8 +56,8 @@ return (
                     {weatherData?.city.name}
                 </h3>
             </div>
-            <div style={styles.parameter}>
-                <div style={styles.windspeed}>
+            <div className="parameter">
+                <div className="windspeed">
                     <h3>
                         Windspeed
                     </h3>
@@ -66,7 +66,7 @@ return (
                     </h1>
 
                 </div>
-                <div style={styles.humidity}>
+                <div className="humidity">
                     <h3>
                         Humidity
                     </h3>
@@ -75,7 +75,7 @@ return (
                     </h1>
 
                 </div>
-                <div style={styles.precipitation}>
+                <div className="precipitation">
                     <h3>
                         Precipitation probability
                     </h3>
@@ -90,22 +90,5 @@ return (
 )
 
 };
-const styles: { [name: string]: React.CSSProperties } = {
-    container: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        alignSelf: 'center',
-    },
-    temperature: {
-    },
-    city: {
-        flexDirection: 'row',
-    },
-    parameter: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-    },
-};
+
 export default WeatherCard;
