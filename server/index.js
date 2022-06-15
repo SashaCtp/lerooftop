@@ -1,5 +1,6 @@
 import express from 'express';
 import http from 'http';
+import { PORT, getBaseUrl } from './conf.js';
 import APIRouter from './routes/api.js';
 
 const app = express();
@@ -18,6 +19,9 @@ app.get('/', (req, res) => {
 app.use('/api', APIRouter);
 
 // Launch server
-server.listen(3000, () => {
-	console.log('listening on *:3000');
+server.listen(PORT, (err) => {
+	if(err)
+		return console.error(err);
+
+	console.log(`Server started on ${getBaseUrl()}`);
 });
