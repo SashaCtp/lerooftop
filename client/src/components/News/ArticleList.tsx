@@ -1,7 +1,7 @@
 import React from "react";
-import ArticleData from "../models/ArticleData";
+import ArticleData from "../../models/ArticleData";
 import Article from "./Article";
-import Loader from "./Loader";
+import Loader from "../Loader/Loader";
 
 type Props = {
     articles: ArticleData[],

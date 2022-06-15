@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ArticleData from "../models/ArticleData";
-import Article from "./Article";
 import ArticleList from "./ArticleList";
-import Card from "./Card";
+import Card from "../Card/Card";
 
 const NewsCard = () => {
     

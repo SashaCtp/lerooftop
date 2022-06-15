@@ -1,7 +1,7 @@
 import React from 'react';
-import MainContainer from './components/MainContainer';
-import Card from './components/Card';
-import NewsCard from './components/NewsCard';
+import MainContainer from './components/Container/MainContainer';
+import Card from './components/Card/Card';
+import NewsCard from './components/News/NewsCard';
 
 function App() {
 

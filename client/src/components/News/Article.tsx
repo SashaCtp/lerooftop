@@ -1,7 +1,7 @@
 import React from "react";
-import ArticleData from "../models/ArticleData";
+import ArticleData from "../../models/ArticleData";
 
-import '../style/article.css';
+import './article.css';
 
 type Props = {
     article: ArticleData

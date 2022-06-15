@@ -10,7 +10,6 @@
 .selectCountry select {
     border: 2px solid #6A82FB;
     display: inline-block;
-    margin-left: 25px;
     height: 40px;
     width: 150px;
     font-family: 'Atkinson Hyperlegible';
