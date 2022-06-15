@@ -9,7 +9,7 @@ type Props = {
 const MainContainer: React.FC<Props> = ({ children }) => {
 
     return (
-        <div className="container">
+        <div className="mainContainer">
             <div className="grain"></div>            
             {children}
         </div>

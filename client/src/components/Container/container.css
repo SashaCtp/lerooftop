@@ -9,7 +9,7 @@
     opacity: 0.1;
 }
 
-.container {
+.mainContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,7 +29,7 @@
 }
 
 @media screen and (max-width: 992px){
-    .container{
+    .mainContainer{
         flex-direction: column;
         justify-content: flex-start;
         padding: 50px 40px;

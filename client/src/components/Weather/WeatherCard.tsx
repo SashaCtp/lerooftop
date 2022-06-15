@@ -1,6 +1,6 @@
 import React, { Dispatch, useEffect, useState } from "react";
-import Card from "./Card"
-import '../style/WeatherCard.css';
+import Card from "../Card/Card"
+import './WeatherCard.css';
 
 const WeatherCard = () => {
     const [weatherData, setWeatherData]: [any, Dispatch<any>] = useState();
