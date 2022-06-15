@@ -1,3 +1,33 @@
+.selectCountry {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom:  1px #CCC dashed;
+    padding-bottom: 15px;
+}
+
+.selectCountry select {
+    border: 2px solid #6A82FB;
+    display: inline-block;
+    margin-left: 25px;
+    height: 40px;
+    width: 150px;
+    font-family: 'Atkinson Hyperlegible';
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
 .articleLink {
     text-decoration: none;
 }
@@ -15,7 +45,7 @@
     position: relative;
 }
 
-.article .mediaName{
+.article .mediaName {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,16 +60,16 @@
     padding: 0 10px;
 }
 
-.article:hover{
+.article:hover {
     border-left: 4px solid #6A82FB;
     padding-left: 0px;
 }
 
-.article:hover .mediaName{
+.article:hover .mediaName {
     left: -4px;
 }
 
-.article .aside{
+.article .aside {
     height: 100%;
     width: 35%;
     margin-right: 20px;
@@ -48,21 +78,20 @@
     justify-content: space-between;
 }
 
-.article .content{
+.article .content {
     width: 65%;
 }
 
-.article .aside .thumbnail{
+.article .aside .thumbnail {
     width: 100%;
     height: auto;
 }
 
-.article .content h3{
+.article .content h3 {
     font-family: 'Atkinson Hyperlegible';
     color: black;
     font-weight: 700;
     font-style: normal;
-    text-decoration: none!important;
+    text-decoration: none !important;
     font-size: 18px;
 }
-

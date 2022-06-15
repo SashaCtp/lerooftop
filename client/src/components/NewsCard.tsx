@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ArticleData from "../models/ArticleData";
 import Article from "./Article";
+import ArticleList from "./ArticleList";
 import Card from "./Card";
 
 const NewsCard = () => {
@@ -8,40 +9,44 @@ const NewsCard = () => {
     const API_BASE_URL = 'http://localhost:3000/';
     const [articles, setArticles] = useState([]);
     const [country, setCountry] = useState('fr');
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
+        setLoaded(false);
+        setArticles([]);
         fetch(`${API_BASE_URL}api/news/top-headlines?country=${country}`)
         .then(res => res.json())
         .then(data => {
             
             let articlesCount = Math.min(data.totalResults, 5);
-            setArticles(data.articles.slice(0, articlesCount));
+            setTimeout(() => {
+                setArticles(data.articles.slice(0, articlesCount));
+                setLoaded(true);
+            }, 2000)
+            
 
         })
         .catch(err => {
             console.error(err);
+            setLoaded(true);
         });
     }, [country]);
 
     return (
         <Card icon='📰' title='News'>
 
-            <select value={country} onChange={(event: any) => {
-                setCountry(event.target.value);
-            }}>
-                <option value={'fr'}>France</option>
-                <option value={'ru'}>Russia</option>
-                <option value={'gb'}>Greate Britain</option>
-                <option value={'us'}>USA</option>
-            </select>
-
-            {
-                articles.map((article: ArticleData, index, arr) => {
-                    return (
-                        <Article article={article} key={index} />
-                    )  
-                })
-            }
+            <div className="selectCountry">
+                <select value={country} onChange={(event: any) => {
+                    setCountry(event.target.value);
+                }}>
+                    <option value={'fr'}>France</option>
+                    <option value={'ru'}>Russia</option>
+                    <option value={'gb'}>Great Britain</option>
+                    <option value={'us'}>USA</option>
+                </select>
+            </div>
+            
+            <ArticleList articles={articles} loaded={loaded} />
 
         </Card>
     );

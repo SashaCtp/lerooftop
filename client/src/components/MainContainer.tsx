@@ -22,7 +22,7 @@ const styles : {[name: string]: React.CSSProperties} = {
     container: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         boxSizing: 'border-box',
         height: '100vh',
         width: '100vw',
