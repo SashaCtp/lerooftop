@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import '../style/card.css';
+import './card.css';
 
 type Props = {
     icon: string,
