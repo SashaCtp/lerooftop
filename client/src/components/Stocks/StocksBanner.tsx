@@ -9,11 +9,18 @@ const StocksBanner = () => {
 
     const [stocksData, setStocksData] = useState([]);
     const [loaded, setLoaded] = useState(false);
+    const companies = [
+        'AAPL',
+        'GOOG',
+        'AMZN',
+        'MSFT',
+        'TSLA'
+    ]
 
     useEffect(() => {
         setLoaded(false);
         fetch(
-            'http://localhost:3000/api/stocks/quote?region=US&lang=en&symbols=AAPL%2CGOOG%2CAMZN%2CMSFT',
+            'http://localhost:3000/api/stocks/quote?region=US&lang=en&symbols=' + companies.join('%2C'),
             {
                 method: 'GET'
             })
