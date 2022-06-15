@@ -41,31 +41,11 @@
     margin: 15px 0;
     margin-top: 40px;
     padding-left: 4px;
-    position: relative;
-}
-
-.article .mediaName {
-    position: absolute;
-    top: 0;
-    left: 0;
-    top: -25px;
-    height: 25px;
-    line-height: 25px;
-    background: #6A82FB;
-    color: #FFF;
-    font-family: 'Atkinson Hyperlegible';
-    font-weight: 400;
-    display: block;
-    padding: 0 10px;
 }
 
 .article:hover {
     border-left: 4px solid #6A82FB;
     padding-left: 0px;
-}
-
-.article:hover .mediaName {
-    left: -4px;
 }
 
 .article .aside {
@@ -84,7 +64,20 @@
 .article .aside .thumbnail {
     width: 100%;
     height: auto;
+    padding: 10px;
+    border-radius: 15px!important;
 }
+
+.article .content .mediaName {
+    display: inline;
+    background: #6A82FB;
+    color: #FFF;
+    font-family: 'Atkinson Hyperlegible';
+    font-weight: 400;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
 
 .article .content h3 {
     font-family: 'Atkinson Hyperlegible';

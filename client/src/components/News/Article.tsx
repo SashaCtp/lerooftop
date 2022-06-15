@@ -12,11 +12,11 @@ const Article =  (props: Props) => {
     return (
         <a href={props.article.url} className="articleLink" target="_blank">
             <div className="article">
-                <div className="mediaName">{ props.article.source.name }</div>
                 <div className="aside">
                     <img src={props.article.urlToImage} className='thumbnail'/>
                 </div>
                 <div className="content">
+                    <div className="mediaName">{ props.article.source.name }</div>
                     <h3>{ props.article.title }</h3>
                 </div>
             </div>
