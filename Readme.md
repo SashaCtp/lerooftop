@@ -32,6 +32,12 @@ For this project we used 3 different APIs :
   > https://api.meteo-concept.com/
 
 ## OpenAI
+
+OpenAI is our fourth present API in the dashboard and provides a community library for handle request.
+*The AI is trained to be a sarcastic chat bot, requires english messages and can't remember previous questions*
+
+> https://beta.openai.com/examples/default-marv-sarcastic-chat
+> https://beta.openai.com/overview
   
 ## Proxy
 
