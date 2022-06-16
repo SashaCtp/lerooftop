@@ -15,7 +15,6 @@ function App() {
 				<div className='row'>
 					<StocksBanner />
 				</div>
-
 				<div className='column'>
 					<NewsCard />
 				</div>

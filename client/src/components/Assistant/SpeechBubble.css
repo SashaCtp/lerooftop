@@ -1,0 +1,30 @@
+.speech-container{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.speech-bubble{
+    max-width: 50%;
+    border-radius: 5px;
+    padding: 0em 0.5em;
+}
+
+.speech-text{
+    max-width: 100%;
+    text-align: left;
+    overflow-wrap: break-word;
+    font-size: 0.7em;
+} 
+
+.name{
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    font-size: 0.6em;
+}
+
+.speech-date{
+    font-size: 1em;
+    font-style: italic;
+}
