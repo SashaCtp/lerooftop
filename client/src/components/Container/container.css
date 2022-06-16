@@ -1,0 +1,47 @@
+.grain {
+    background-image: url('../../images/noise.svg');
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    padding: 25px 40px;
+    overflow-x: hidden;
+    background: linear-gradient(#060F5B, #6A82FB);
+    filter: contrast(120%) brightness(110%);
+}
+
+.column {
+    width: 50%;
+    padding: 0 25px;
+}
+
+.row {
+    width: 100%;
+    padding: 0 25px;
+}
+
+@media screen and (max-width: 992px){
+    .mainContainer{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 30px 20px;
+        overflow-y: auto;
+    }
+
+    .column {
+        width: 100%;
+        padding: 25px 25px;
+    }
+}

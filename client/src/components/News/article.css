@@ -1,0 +1,90 @@
+.selectCountry {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom:  1px #CCC dashed;
+    padding-bottom: 15px;
+}
+
+.selectCountry select {
+    border: 2px solid #6A82FB;
+    display: inline-block;
+    height: 40px;
+    width: 150px;
+    font-family: 'Atkinson Hyperlegible';
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.articleLink {
+    text-decoration: none;
+}
+
+.article {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px #CCC dashed;
+    margin: 15px 0;
+    margin-top: 40px;
+    padding-left: 4px;
+}
+
+.article:hover {
+    border-left: 4px solid #6A82FB;
+    padding-left: 0px;
+}
+
+.article .aside {
+    height: 100%;
+    width: 35%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article .content {
+    width: 65%;
+}
+
+.article .aside .thumbnail {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 15px!important;
+}
+
+.article .content .mediaName {
+    display: inline;
+    background: #6A82FB;
+    color: #FFF;
+    font-family: 'Atkinson Hyperlegible';
+    font-weight: 400;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+
+.article .content h3 {
+    font-family: 'Atkinson Hyperlegible';
+    color: black;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none !important;
+    font-size: 18px;
+}
