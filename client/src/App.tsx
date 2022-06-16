@@ -1,10 +1,9 @@
 import React from 'react';
 import MainContainer from './components/Container/MainContainer';
-import Card from './components/Card/Card';
 import NewsCard from './components/News/NewsCard';
 import WeatherCard from './components/Weather/WeatherCard';
-import Banner from './components/Banner/Banner';
 import StocksBanner from './components/Stocks/StocksBanner';
+import AICard from './components/Assistant/AICard';
 
 function App() {
 
@@ -21,9 +20,7 @@ function App() {
 
 				<div className='column'>
 					<WeatherCard />
-					<Card icon='🗣️' title='Smart Assistant'>
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis minus qui totam fugit asperiores, repellat laboriosam accusamus, sequi reprehenderit inventore natus at explicabo officiis? Asperiores pariatur distinctio ut sit iure.
-					</Card>
+					<AICard />
 				</div>
 			</MainContainer>
 		</div>

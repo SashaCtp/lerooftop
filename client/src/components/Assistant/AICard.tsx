@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Card from "../Card";
+import Card from "../Card/Card";
 import "./AICard.css";
 import SpeechBubble from "./SpeechBubble";
 
@@ -9,6 +9,7 @@ type message = {
     content: string;
     isUser: boolean;
 }
+
 
 const AICard = (props: Props) => {
     const [clientText, setClientText] = useState<message>({content: "", isUser: true});
@@ -22,7 +23,6 @@ const AICard = (props: Props) => {
         if(clientInput.current != null)
             clientInput.current.value = "";
     }
-
 
     return (
         <Card icon="😎" title="Ask our assistant">
