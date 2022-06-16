@@ -33,9 +33,8 @@ const WeatherCard = () => {
     useEffect(() => {
 
         getLocation().then((location: any) => {
-            const TOKEN = '617d81918aac72bde4dda3798e98c7f4bcad48caa8ff11beaf28bd45e7b39986';
             fetch(
-                `https://api.meteo-concept.com/api/forecast/nextHours?latlng=${location.latitude},${location.longitude}&token=${TOKEN}`,
+                `http://localhost:3000/api/weather/forecast/nextHours?latlng=${location.latitude},${location.longitude}`,
                 {
                     method: 'GET',
                     headers: {

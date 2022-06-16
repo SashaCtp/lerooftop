@@ -49,11 +49,36 @@ api.get('/stocks/*', (req, res) => {
     const API_KEY = '0Z9Xum8dRQaz1lCUaWNhSgyHzfdl1LF1DQIjQzJ3';
 
     let proxy = BASE_URL + req.url.substring(8);
-    console.log('Stocks API request : ' + proxy)
+    console.log('Stocks API request : ' + proxy);
     
     axios.get(proxy, {
         headers: {
             'X-API-Key': API_KEY
+        }
+    }).then(data => {
+        res.send(data.data);
+    }).catch(err => {
+        console.error(err);
+        res.status(400).send(err);
+    });
+
+});
+
+// Weather API
+api.get('/weather/*', (req, res) => {
+
+    if(req.url == '/weather/')
+        return res.sendStatus(404);
+    
+    const BASE_URL = 'https://api.meteo-concept.com/api/';
+    const API_KEY = '617d81918aac72bde4dda3798e98c7f4bcad48caa8ff11beaf28bd45e7b39986';
+
+    let proxy = BASE_URL + req.url.substring(9);
+    console.log('Weather API request : ' + proxy);
+
+    axios.get(proxy, {
+        headers: {
+            'Authorization': 'Bearer ' + API_KEY
         }
     }).then(data => {
         res.send(data.data);
