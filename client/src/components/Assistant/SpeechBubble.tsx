@@ -11,7 +11,7 @@ type Props = {
 const SpeechBubble = (props: Props) => {
     return (
         <div className="speech-container" style={{alignItems: props.isUser ? "flex-end" : "flex-start"}}>
-            <div className="speech-bubble" style={{background: props.isUser ? `linear-gradient(#404dbf, #6A82FB)` : "#CCC"}}>
+            <div className="speech-bubble" style={{background: props.isUser ? "#6A82FB" : "#CCC"}}>
                 <p className="speech-text" style={{color: props.isUser ? "#fff" : "#000"}}>
                     {props.content}
                 </p>

@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Card from "../Card";
 import "./AICard.css";
 import SpeechBubble from "./SpeechBubble";
-import SpeechBubbleClient from "./SpeechBubbleClient";
 
 type Props = {};
 
+
+
 const AICard = (props: Props) => {
-  return (
+    return (
         <Card icon="😎" title="Ask our assistant">
             <div className="scrollable-div">
                 <SpeechBubble
@@ -35,6 +36,12 @@ const AICard = (props: Props) => {
                     name="You"
                     content="test dasdasdjadasjhdaskljhdaskljdhsakljhdaslkjdhaldjkshklajsh"
                 />
+            </div>
+            <div className="input-container">
+                <textarea className="text-input" placeholder="> Ask your question here" rows={1}/>
+                <button className="send-button">
+                    send
+                </button>
             </div>
         </Card>
     );
