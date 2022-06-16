@@ -10,13 +10,12 @@
     margin-top: 1em;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .text-input{
-    
     height: 1em;
-    width: 100%;
+    width: 75%;
     font-size: 0.7em;
     border: none;
     border-bottom: 3px solid darkblue;
@@ -30,16 +29,22 @@
 }
 
 .send-button{
-    width: 3em;
+    width: 8em;
+    height: 2.5em;
     font-size: 0.7em;
-    color: #ffff;
-    margin-left: 2em;
-    background: linear-gradient(90deg, rgba(240,45,69,1) 0%, rgba(240,45,58,1) 100%);
-    border-radius: 3px;
-    border: none;
-    padding: 15px;
+    color: rgb(0, 0, 0);
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-  
+    margin: 0 1em;
+    background: linear-gradient(90deg, rgba(240,45,69,1) 0%, rgba(240,45,58,1) 100%);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
 }  
+
+.send-button:hover{
+    border: 5px solid linear-gradient(90deg, rgb(92, 48, 187) 0%, rgb(84, 45, 240) 100%);
+}
+
+.send-button:active{
+    background: linear-gradient(90deg, rgb(210, 72, 88) 0%, rgb(232, 72, 83) 100%);
+}
