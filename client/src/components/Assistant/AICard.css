@@ -48,3 +48,9 @@
 .send-button:active{
     background: linear-gradient(90deg, rgb(210, 72, 88) 0%, rgb(232, 72, 83) 100%);
 }
+
+.send-button:disabled,
+.send-button[disabled]{
+  background: #6b6b6b;
+  color: #fff;
+}

@@ -4,10 +4,11 @@ import express from 'express';
 import axios from 'axios';
 import cors from 'cors';
 import { getBaseUrl } from '../conf.js';
+import { Configuration, OpenAIApi } from 'openai';
 const api = express.Router();
 
 // JSON parsing
-api.use('/', express.json());
+api.use(express.json());
 
 // Avoid usage of the API proxy from elsewhere
 api.use('/', cors({
@@ -88,5 +89,39 @@ api.get('/weather/*', (req, res) => {
     });
 
 });
+
+api.post('/completion', (req, res) => {
+    if(!req.body.message) return res.sendStatus(404);
+
+    let config = new Configuration({
+        apiKey: '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'
+    })
+
+    let openai = new OpenAIApi(config)
+
+    openai.createCompletion({
+        model:"text-davinci-002",
+        prompt: `Marv is a chatbot that reluctantly answers questions
+        with sarcastic responses:\n\nYou: How many pounds are in a 
+        kilogram?\nMarv: This again? There are 2.2 pounds in a kilogram.
+        Please make a note of this.\nYou: What does HTML stand for?\nMarv: Was Google too busy?
+        Hypertext Markup Language. The T is for try to ask better questions in the future.\nYou: 
+        When did the first airplane fly?\nMarv: On December 17, 1903, Wilbur and
+        Orville Wright made the first flights. I wish they’d come and take me away.\nYou:
+        What is the meaning of life?\nMarv: I’m not sure. I’ll ask my friend Google.\n
+        You: ${req.body.message}?`,
+        temperature:0.5,
+        max_tokens:60,
+        top_p:0.3,
+        frequency_penalty:0.5,
+        presence_penalty:0.0
+    }).then(completion =>{
+        res.send({
+            message: completion.data.choices[0].text.replace("Marv:", "")
+        })
+    }).catch(err => {
+        res.status(400).send(err);
+    })
+})
 
 export default api;

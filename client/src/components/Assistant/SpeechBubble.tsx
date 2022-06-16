@@ -1,11 +1,11 @@
 import React from "react";
 import "./SpeechBubble.css"
-import { getCurrentDate } from "./utils";
 
 type Props = {
     content: string;
     isUser: boolean;
     name: string;
+    date: string;
 };
 
 const SpeechBubble = (props: Props) => {
@@ -19,7 +19,7 @@ const SpeechBubble = (props: Props) => {
             </div>
             <p className="name">
                 {props.name}
-                <span className="speech-date">{" " + getCurrentDate()}</span> 
+                <span className="speech-date">{" " + props.date}</span> 
             </p>
         </div> 
     );
