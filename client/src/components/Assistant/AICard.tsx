@@ -55,14 +55,14 @@ const AICard = (props: Props) => {
     }
 
     return (
-        <Card icon="😎" title="Ask our assistant (in english)">
+        <Card icon="😎" title="Ask our assistant (in english pls)">
             <div className="scrollable-div">
                 {messages.map((mess, idx) => {
                     return <SpeechBubble
                         key={idx}
                         isUser={mess.isUser}
                         content= {mess.content}
-                        name="Mike"
+                        name={mess.isUser ? "You" : "Mike"}
                         date={mess.date}
                     />
                 })}
